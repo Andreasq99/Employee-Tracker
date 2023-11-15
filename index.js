@@ -239,7 +239,7 @@ async function updateEmployeeHandler(){
         (err,roleId)=>{
           if(err){console.log(err)}
           else{
-            console.log(employeesArr.indexOf(res.employee)+1);
+            //console.log(employeesArr.indexOf(res.employee)+1);
             db.query(`UPDATE employees SET role_id=${roleId[0].role_id} WHERE employee_id = ${employeesArr.indexOf(res.employee)+1}`,
             (err,res)=>{
               if(err){console.log(err)}
